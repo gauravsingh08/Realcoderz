@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Salon Booking System</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.razzo.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>com.razzo.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/userRegister</url-pattern>
+  
+  </servlet-mapping> 
+  
+  <servlet>
+  <servlet-name>salonServlet</servlet-name>
+  <servlet-class>com.razzo.servlet.salonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>salonServlet</servlet-name>
+  <url-pattern>/salon</url-pattern>
+  
+  </servlet-mapping> 
+  
+    <servlet>
+  <servlet-name>ShowBookingServlet</servlet-name>
+  <servlet-class>com.razzo.servlet.ShowBookingServlet</servlet-class>
+  </servlet>
+  
+  <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
+    
+    <listener>
+    <listener-class>com.razzo.servlet.ContextListener</listener-class>
+</listener>
+  
+  
+  
+</web-app>
